@@ -1,0 +1,8 @@
+src/*.ts
+src/*.scss
+test
+.vscode
+tsconfig.json
+gulpfile.js
+.jshintrc
+README.md
