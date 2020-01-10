@@ -1,0 +1,37 @@
+{
+  "name": "wikify",
+  "version": "1.0.0",
+  "description": "Automatically creates a documentation wiki from groups of markdown files",
+  "author": "ProgramGamer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programgamer-real/wikify"
+  },
+  "keywords": [
+    "wiki",
+    "markdown"
+  ],
+  "main": "src",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "dev": "gulp dev",
+    "prepublishOnly": "gulp build"
+  },
+  "dependencies": {
+    "highlight.js": "^9.17.1",
+    "marked": "^0.8.0",
+    "mustache": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/highlight.js": "^9.12.3",
+    "@types/marked": "^0.7.2",
+    "@types/mustache": "^0.8.32",
+    "@types/node": "^13.1.5",
+    "github-markdown-css": "^3.0.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.7.4"
+  }
+}
