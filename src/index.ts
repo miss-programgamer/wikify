@@ -32,7 +32,6 @@ export type OutPage = {
 };
 
 export type OutSection = {
-	label:  string;
 	path:   string;
 	index?: OutPage;
 	pages:  OutPage[];
@@ -151,7 +150,7 @@ export class Wiki {
 	public save(out: string): void {
 		mkdirSync(out, { recursive: true });
 		
-		for (const section of this.renderSections(this._sections, this.tocs)) {
+		for (const section of this.renderSections(this._sections, this.getTocs(this._sections))) {
 			if (section.pages.length > 0 || section.index != null) {
 				mkdirSync(join(out, section.path), { recursive: true });
 			}
@@ -168,8 +167,8 @@ export class Wiki {
 	/**
 	 * @returns {Tocs} the table of contents for this wiki's sections
 	 */
-	public get tocs(): Tocs {
-		return this._sections.map(section => {
+	public getTocs(sections: InSection[]): Tocs {
+		return sections.map(section => {
 			return {
 				label: section.label,
 				href:  section.index != null ? this._hrefFilter(section.index.path, section.path, section.index?.path) : null,
@@ -249,8 +248,6 @@ export class Wiki {
 		if (url.origin === this.base.origin) {
 			const parsed = parsePath(this.base.pathname + "/" + sectionpath + url.pathname);
 			
-			console.log("hrefs:", parsed.base, indexpath);
-			
 			if (parsed.base === indexpath) {
 				parsed.base = "index.html";
 			} else {
@@ -260,8 +257,6 @@ export class Wiki {
 			
 			url.pathname = formatPath(parsed);
 		}
-		
-		console.log(href, "->", url.href);
 		
 		return url.href;
 	}
@@ -278,6 +273,7 @@ export class Wiki {
 		}
 		
 		delete parsed.dir;
+		delete parsed.root;
 		
 		return formatPath(parsed);
 	}

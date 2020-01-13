@@ -1,5 +1,6 @@
 src/*.ts
 src/*.scss
+!src/*.d.ts
 test
 .vscode
 tsconfig.json

@@ -1,4 +1,4 @@
-# Wikify `v1.0.0`
+# Wikify
 
 Wikify is a small and convenient module that converts a group of markdown files in a directory into html files to create a wiki. It uses [Marked](https://www.npmjs.com/package/marked) to convert markdown into html and embeds that into a customizable [Mustache](https://www.npmjs.com/package/mustache) template. It then uses [Highlight.js](https://www.npmjs.com/package/highlight.js) to do syntax highlighting on code blocks.
 
