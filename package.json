@@ -1,6 +1,6 @@
 {
   "name": "wikify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically creates a documentation wiki from groups of markdown files",
   "author": "ProgramGamer",
   "license": "MIT",
