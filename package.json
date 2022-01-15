@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "highlight.js": "^9.17.1",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "mustache": "^3.2.1"
   },
   "devDependencies": {
