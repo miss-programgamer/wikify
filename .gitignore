@@ -1,5 +1,8 @@
+# Editor ignores
 .vscode
+
+# Node ignores
 node_modules
-src/*.js
-src/*.css
-src/*.d.ts
+
+# Project ignores
+lib
