@@ -30,7 +30,7 @@
     "@types/node": "^13.1.5",
     "github-markdown-css": "^3.0.1",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^6.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "typescript": "^3.7.4"
   }
